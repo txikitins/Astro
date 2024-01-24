@@ -1,15 +1,13 @@
 ---
 
-const { title, author } = Astro.props;
+const { title, author} = Astro.props;
 
 ---
 
-<div class="flex justify-center">
-			
-    <div class="flex text-white text-center max-w-3xl">
-        <h1 class="m-5 flex-1 grow-1 bg-blue-900 rounded-xl p-2">
+
+    <div class="text-gray-300 text-center grow justify-center">
+        <h1 class="m-5 bg-blue-900 rounded-lg p-2">
             {title} by {author}
         </h1>	
     </div>
 
-</div>
