@@ -5,7 +5,7 @@ const datos = await fetch('https://kriskraft.eu/datos.json').then((response) =>
   response.json()
 );
 
-console.log(datos);
+
 ---
 
 
@@ -18,16 +18,16 @@ console.log(datos);
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-		<link rel="stylesheet" href="./output.css" />
+		<link rel="stylesheet" href="/output.css" />
 
 		<title>KRISKRAFT</title>
 
 	</head>
-	<body>
+	<body class="bg-rose-400">
 
-		<h1 class="text-blue-900 text-center text-3xl my-10">Bienvenido a KrisKraft</h1> 
+		<img src="logo2.jpg">
 
-		<div class = "mx-auto flex flex-col grid  md:grid-cols-3  lg:grid-cols-4 sm:grid-cols-2 grid-flow-row  gap-8 p-6 my-8 justify-items-center">
+		<div class = "mx-auto flex flex-col grid  md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-flow-row  gap-8 p-6 my-8 justify-items-center">
 
 			
 				{datos.fichas.map(ficha => ( 
