@@ -1,13 +1,15 @@
 ---
 
-const { title, author} = Astro.props;
+const { titulo, imgurl} = Astro.props;
 
 ---
 
 
-    <div class="text-gray-300 text-center grow justify-center">
-        <h1 class="m-5 bg-blue-900 rounded-lg p-2">
-            {title} by {author}
-        </h1>	
+    <div class="rounded-md text-gray-300 bg-blue-900 text-center max-w-sm">
+
+        <img class="rounded-md" src={imgurl}>
+        
+            <h1>{titulo}</h1>
+  
     </div>
 

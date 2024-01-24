@@ -1,11 +1,11 @@
 ---
 import Card from '../components/Card.astro';
 
-const fichas = await fetch('https://kriskraft.eu/datos.json').then((response) =>
+const datos = await fetch('https://kriskraft.eu/datos.json').then((response) =>
   response.json()
 );
 
-console.log(fichas);
+console.log(datos);
 ---
 
 
@@ -27,11 +27,11 @@ console.log(fichas);
 
 		<h1 class="text-blue-900 text-center text-3xl my-10">Bienvenido a KrisKraft</h1> 
 
-		<div>
+		<div class = "mx-auto flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-3 w-full max-w-6xl gap-8 p-6 my-8 justify-items-center">
 			 
 			
-				{fichas.posts.map(dato => ( 
-					<Card title={dato.title} author={dato.author}/>
+				{datos.fichas.map(ficha => ( 
+					<Card titulo={ficha.titulo} imgurl={ficha.imgurl}/>
 				))}
 			
 			
