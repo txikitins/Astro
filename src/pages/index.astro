@@ -23,11 +23,11 @@ const datos = await fetch('https://kriskraft.eu/datos.json').then((response) =>
 		<title>KRISKRAFT</title>
 
 	</head>
-	<body class="bg-rose-400">
+	<body class="bg-slate-200 m-5">
 
-		<img src="logo2.jpg">
+		<img class="w-52 bg-white rounded-md m-auto shadow-black shadow-2xl" src="logo.svg">
 
-		<div class = "mx-auto flex flex-col grid  md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-flow-row  gap-8 p-6 my-8 justify-items-center">
+		<div class = "shadow-black shadow-2xl bg-white rounded-2xl mx-auto flex flex-col grid  md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-flow-row gap-8 max-w-7xl p-6 my-8 justify-items-center">
 
 			
 				{datos.fichas.map(ficha => ( 
