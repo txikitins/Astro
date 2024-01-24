@@ -27,8 +27,8 @@ console.log(datos);
 
 		<h1 class="text-blue-900 text-center text-3xl my-10">Bienvenido a KrisKraft</h1> 
 
-		<div class = "mx-auto flex flex-col lg:grid lg:grid-cols-4 lg:grid-rows-3 w-full max-w-6xl gap-8 p-6 my-8 justify-items-center">
-			 
+		<div class = "mx-auto flex flex-col grid  md:grid-cols-3  lg:grid-cols-4 sm:grid-cols-2 grid-flow-row  gap-8 p-6 my-8 justify-items-center">
+
 			
 				{datos.fichas.map(ficha => ( 
 					<Card titulo={ficha.titulo} imgurl={ficha.imgurl}/>
