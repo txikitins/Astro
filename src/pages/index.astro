@@ -1,92 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from '../components/card.astro';
+
+const fichas = await fetch('https://kriskraft.eu/datos.json').then((response) =>
+  response.json()
+);
+
+console.log(fichas);
 ---
 
-<Layout title="KRISKRAFT !!!!!">
-	<main>
-	
-		<h1 class="text-red-600 text-center">Bienvenido a </h1> <p class="text-gradient">KrisKraft</p>
-		<p class="instructions">
-			Gracias por visitarnos. Aqui se muestran algunos objetos hechos a mano con esfuerzo, tiempo y dedicación. Esperamos que os gusten.
-		</p>
-		<ul role="list">
-			<Card 
-				href="https://docs.astro.build/"
-				title="Macramé"
-				body="Creaciones aptas para llaveros, carteras, tiradores de muebles, colgantes, atrapasueños y lo que tu imaginaciónquiera."
-			/>
-			<Card
-				href="https://madera.kriskraft.eu/"
-				title="Madera"
-				body="Creaciones en madera de corte o de relieve con un sinfín de posibilidades"
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Metal"
-				body="Grabados, troquelados, relieves y mas."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Cuero"
-				body="Pues eso, cuero, poco mas que decir."
-			/>
-		</ul>
-	</main>
-</Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: rgba(235, 223, 100, 0.956);
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-		align-content: center;
-		text-align: center;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
 
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+		<link rel="stylesheet" href="./output.css" />
+
+		<title>KRISKRAFT</title>
+
+	</head>
+	<body>
+
+		<h1 class="text-blue-900 text-center text-3xl my-10">Bienvenido a KrisKraft</h1> 
+
+		<div>
+			 
+			
+				{fichas.posts.map(dato => ( 
+					<Card title={dato.title} author={dato.author}/>
+				))}
+			
+			
+		</div>
+		
+	</body>
+</html>
