@@ -1,0 +1,32 @@
+---
+import Header from '../header_footer/header.astro'
+import Footer from '../header_footer/footer.astro'
+import Landing from '../components/landing.astro'
+import Logo from '../header_footer/logo.astro'
+
+
+import Card from '../components/card.astro';
+
+const datos = await fetch('https://kriskraft.eu/datos.json').then((response) =>
+  response.json()
+);
+
+
+---
+
+
+<Header/>
+<Logo/>
+
+
+		<div class = "shadow-black shadow-2xl bg-white rounded-2xl mx-auto flex flex-col grid  md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-flow-row gap-8 max-w-7xl p-6 my-8 justify-items-center">
+
+			
+				{datos.fichas.map(ficha => ( 
+					<Card titulo={ficha.titulo} imgurl={ficha.imgurl}/>
+				))}
+			
+			
+		</div>
+		
+<Footer/>

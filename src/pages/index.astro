@@ -1,41 +1,23 @@
 ---
-import Card from '../components/Card.astro';
-
-const datos = await fetch('https://kriskraft.eu/datos.json').then((response) =>
-  response.json()
-);
-
-
+import Header from '../header_footer/header.astro'
+import Footer from '../header_footer/footer.astro'
+import Landing from '../components/landing.astro'
+import Logo from '../header_footer/logo.astro'
 ---
 
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+<Header/>
+<Logo/>
 
-		<link rel="stylesheet" href="/output.css" />
 
-		<title>KRISKRAFT</title>
+<Landing/>
 
-	</head>
-	<body class="bg-slate-200 m-5">
 
-		<img class="w-52 bg-white rounded-md m-auto shadow-black shadow-2xl" src="logo.svg">
+<Footer/>
 
-		<div class = "shadow-black shadow-2xl bg-white rounded-2xl mx-auto flex flex-col grid  md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 grid-flow-row gap-8 max-w-7xl p-6 my-8 justify-items-center">
 
-			
-				{datos.fichas.map(ficha => ( 
-					<Card titulo={ficha.titulo} imgurl={ficha.imgurl}/>
-				))}
-			
-			
-		</div>
-		
-	</body>
-</html>
+
+
+
+
+    
