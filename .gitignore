@@ -9,7 +9,7 @@ node_modules
 
 # Ignora los archivos relacionados a API keys y markdown
 .env
-.md
+*.md
 
 # Imagenes que se pasarán a mano al servidor
 *.jpg
