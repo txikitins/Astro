@@ -12,4 +12,4 @@ node_modules
 .md
 
 # Imagenes que se pasarán a mano al servidor
-public/*.jpg
+*.jpg
