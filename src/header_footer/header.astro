@@ -4,11 +4,11 @@ import Navbar from "../components/navbar.astro"
 
 import '@fontsource/poiret-one';
 import { ViewTransitions } from 'astro:transitions';
-import {slide} from 'astro:transitions';
+import {fade} from 'astro:transitions';
 ---
 
 <!doctype html>
-<html lang="es" transition:animate={slide({duration:'0.5s'})}>
+<html lang="es" transition:animate={fade({duration:'0.5s'})}>
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
