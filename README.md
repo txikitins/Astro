@@ -1,3 +1,4 @@
-# astro
- testing GIT and Astro bdg
+# TX
+Probando astro y de paso git. los commits van nombraados de cualquier manera.
+ 
  
