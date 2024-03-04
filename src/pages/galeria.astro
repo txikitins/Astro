@@ -6,7 +6,7 @@ import Footer from '../header_footer/footer.astro'
 
 import Card from '../components/Card.astro';
 
-const datos = await fetch('https://kriskraft.eu/datos.json').then((response) =>
+const datos = await fetch('http://192.168.0.23/showapi').then((response) =>
   response.json()
 );
 
