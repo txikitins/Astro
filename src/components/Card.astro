@@ -1,15 +1,16 @@
 ---
-
-const { titulo, imgurl} = Astro.props;
-
+const { titulo, imagen, prefijo, id, precio } = Astro.props;
 ---
 
+<div class="max-w-md rounded-xl text-center text-black">
+    <h1>{id}</h1>
+    <img
+        class="aspect-square w-auto rounded-3xl p-2 hover:aspect-auto"
+        src={prefijo + imagen}
+    />
 
-    <div class="rounded-xl text-black  text-center max-w-lg">
-
-        <img class="rounded-xl p-2" src={imgurl}>
-        
-            <h1 class="px-2">{titulo}</h1>
-  
+    <div class="columns-2">
+        <h1 class="pl-5 text-left uppercase">{titulo}</h1>
+        <h1 class="col-start-2 pr-5 text-right">{precio}€</h1>
     </div>
-
+</div>
